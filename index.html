@@ -1,0 +1,603 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>岸和田高校49期 同窓会</title>
+
+<style>
+    * {
+        box-sizing: border-box;
+    }
+
+    body {
+        margin: 0;
+        font-family:
+            -apple-system,
+            BlinkMacSystemFont,
+            "Noto Sans JP",
+            "Helvetica Neue",
+            Arial,
+            sans-serif;
+        background: #f5f6f8;
+        color: #222;
+        line-height: 1.7;
+    }
+
+    /* --------------------
+       Header
+    -------------------- */
+
+    header {
+        background: #1d2733;
+        color: white;
+        text-align: center;
+        padding: 55px 20px 50px;
+    }
+
+    .school-name {
+        font-size: 14px;
+        letter-spacing: 0.15em;
+        opacity: 0.75;
+        margin-bottom: 12px;
+    }
+
+    h1 {
+        margin: 0;
+        font-size: clamp(30px, 6vw, 48px);
+        font-weight: 700;
+        letter-spacing: 0.05em;
+    }
+
+    .subtitle {
+        margin-top: 12px;
+        font-size: 15px;
+        opacity: 0.8;
+    }
+
+    /* --------------------
+       Main
+    -------------------- */
+
+    main {
+        width: min(900px, calc(100% - 32px));
+        margin: 40px auto 70px;
+    }
+
+    /* --------------------
+       News
+    -------------------- */
+
+    .news {
+        background: white;
+        border-radius: 16px;
+        padding: 24px 26px;
+        margin-bottom: 24px;
+        box-shadow: 0 5px 20px rgba(0,0,0,0.05);
+    }
+
+    .news-title {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        font-weight: 700;
+        font-size: 18px;
+        margin-bottom: 15px;
+    }
+
+    .news-label {
+        background: #c59b55;
+        color: white;
+        padding: 3px 9px;
+        border-radius: 5px;
+        font-size: 11px;
+        letter-spacing: 0.08em;
+    }
+
+    .news-item {
+        display: flex;
+        gap: 16px;
+        padding: 10px 0;
+        border-bottom: 1px solid #eee;
+    }
+
+    .news-item:last-child {
+        border-bottom: none;
+    }
+
+    .news-date {
+        color: #777;
+        font-size: 13px;
+        white-space: nowrap;
+    }
+
+    /* --------------------
+       Accordion
+    -------------------- */
+
+    .accordion {
+        background: white;
+        border-radius: 16px;
+        margin-bottom: 16px;
+        overflow: hidden;
+        box-shadow: 0 5px 20px rgba(0,0,0,0.05);
+    }
+
+    .accordion-button {
+        width: 100%;
+        border: none;
+        background: white;
+        padding: 23px 26px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        cursor: pointer;
+        text-align: left;
+        font-family: inherit;
+        font-size: 17px;
+        font-weight: 600;
+        color: #222;
+    }
+
+    .accordion-button:hover {
+        background: #fafafa;
+    }
+
+    .accordion-left {
+        display: flex;
+        align-items: center;
+        gap: 15px;
+    }
+
+    .icon {
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        background: #eef1f4;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 18px;
+    }
+
+    .arrow {
+        font-size: 20px;
+        color: #999;
+        transition: transform 0.25s ease;
+    }
+
+    .accordion.open .arrow {
+        transform: rotate(180deg);
+    }
+
+    .accordion-content {
+        display: none;
+        padding: 0 26px 26px;
+        color: #555;
+    }
+
+    .accordion.open .accordion-content {
+        display: block;
+    }
+
+    /* --------------------
+       Content
+    -------------------- */
+
+    .info-box {
+        background: #f7f8fa;
+        border-radius: 10px;
+        padding: 18px;
+        margin-top: 12px;
+    }
+
+    .info-row {
+        display: flex;
+        gap: 20px;
+        padding: 8px 0;
+        border-bottom: 1px solid #e5e7ea;
+    }
+
+    .info-row:last-child {
+        border-bottom: none;
+    }
+
+    .info-label {
+        width: 90px;
+        flex-shrink: 0;
+        color: #777;
+        font-size: 14px;
+    }
+
+    .info-value {
+        color: #222;
+        font-weight: 500;
+    }
+
+    .member {
+        display: flex;
+        align-items: center;
+        gap: 14px;
+        padding: 12px 0;
+        border-bottom: 1px solid #eee;
+    }
+
+    .member:last-child {
+        border-bottom: none;
+    }
+
+    .member-icon {
+        width: 42px;
+        height: 42px;
+        background: #e9edf1;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    /* --------------------
+       Footer
+    -------------------- */
+
+    footer {
+        text-align: center;
+        color: #999;
+        font-size: 12px;
+        padding: 20px;
+    }
+
+    /* --------------------
+       Mobile
+    -------------------- */
+
+    @media (max-width: 600px) {
+
+        header {
+            padding: 42px 18px 38px;
+        }
+
+        main {
+            width: calc(100% - 22px);
+            margin-top: 25px;
+        }
+
+        .news {
+            padding: 20px;
+        }
+
+        .news-item {
+            display: block;
+        }
+
+        .news-date {
+            display: block;
+            margin-bottom: 3px;
+        }
+
+        .accordion-button {
+            padding: 19px;
+        }
+
+        .accordion-content {
+            padding: 0 19px 22px;
+        }
+
+        .info-row {
+            display: block;
+        }
+
+        .info-label {
+            display: block;
+            width: auto;
+            margin-bottom: 2px;
+        }
+    }
+</style>
+</head>
+
+
+<body>
+
+<header>
+
+    <div class="school-name">
+        岸和田高等学校
+    </div>
+
+    <h1>49期 同窓会</h1>
+
+    <div class="subtitle">
+        KISHIWADA HIGH SCHOOL 49th
+    </div>
+
+</header>
+
+
+<main>
+
+    <!-- 最新ニュース -->
+
+    <section class="news">
+
+        <div class="news-title">
+            <span class="news-label">NEWS</span>
+            最新アップデート
+        </div>
+
+        <div class="news-item">
+            <div class="news-date">2026.10.01</div>
+            <div>
+                同窓会ホームページを公開しました。
+            </div>
+        </div>
+
+        <div class="news-item">
+            <div class="news-date">2026.09.20</div>
+            <div>
+                同窓会開催概要を更新しました。
+            </div>
+        </div>
+
+    </section>
+
+
+    <!-- 会場情報 -->
+
+    <section class="accordion">
+
+        <button class="accordion-button">
+
+            <div class="accordion-left">
+
+                <div class="icon">📍</div>
+
+                <div>
+                    会場情報
+                </div>
+
+            </div>
+
+            <div class="arrow">⌄</div>
+
+        </button>
+
+
+        <div class="accordion-content">
+
+            <div class="info-box">
+
+                <div class="info-row">
+                    <div class="info-label">日時</div>
+                    <div class="info-value">
+                        2026年○月○日（○）<br>
+                        ○○:○○ 開始
+                    </div>
+                </div>
+
+                <div class="info-row">
+                    <div class="info-label">会場</div>
+                    <div class="info-value">
+                        ○○ホテル<br>
+                        ○○府○○市○○
+                    </div>
+                </div>
+
+                <div class="info-row">
+                    <div class="info-label">会費</div>
+                    <div class="info-value">
+                        10,000円
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- 振込情報 -->
+
+    <section class="accordion">
+
+        <button class="accordion-button">
+
+            <div class="accordion-left">
+
+                <div class="icon">￥</div>
+
+                <div>
+                    振込情報
+                </div>
+
+            </div>
+
+            <div class="arrow">⌄</div>
+
+        </button>
+
+
+        <div class="accordion-content">
+
+            <p>
+                同窓会会費は以下の口座へお振込みください。
+            </p>
+
+            <div class="info-box">
+
+                <div class="info-row">
+                    <div class="info-label">銀行</div>
+                    <div class="info-value">
+                        ○○銀行
+                    </div>
+                </div>
+
+                <div class="info-row">
+                    <div class="info-label">支店</div>
+                    <div class="info-value">
+                        ○○支店
+                    </div>
+                </div>
+
+                <div class="info-row">
+                    <div class="info-label">口座</div>
+                    <div class="info-value">
+                        普通 ○○○○○○○
+                    </div>
+                </div>
+
+                <div class="info-row">
+                    <div class="info-label">名義</div>
+                    <div class="info-value">
+                        ○○○○○○
+                    </div>
+                </div>
+
+            </div>
+
+            <p style="font-size:13px;color:#888;">
+                ※振込手数料は各自ご負担ください。
+            </p>
+
+        </div>
+
+    </section>
+
+
+    <!-- 幹事紹介 -->
+
+    <section class="accordion">
+
+        <button class="accordion-button">
+
+            <div class="accordion-left">
+
+                <div class="icon">👥</div>
+
+                <div>
+                    幹事紹介
+                </div>
+
+            </div>
+
+            <div class="arrow">⌄</div>
+
+        </button>
+
+
+        <div class="accordion-content">
+
+            <div class="member">
+
+                <div class="member-icon">👤</div>
+
+                <div>
+                    <strong>○○ ○○</strong><br>
+                    <small>幹事代表</small>
+                </div>
+
+            </div>
+
+            <div class="member">
+
+                <div class="member-icon">👤</div>
+
+                <div>
+                    <strong>○○ ○○</strong><br>
+                    <small>幹事</small>
+                </div>
+
+            </div>
+
+            <div class="member">
+
+                <div class="member-icon">👤</div>
+
+                <div>
+                    <strong>○○ ○○</strong><br>
+                    <small>幹事</small>
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- 最新情報 -->
+
+    <section class="accordion">
+
+        <button class="accordion-button">
+
+            <div class="accordion-left">
+
+                <div class="icon">📰</div>
+
+                <div>
+                    最新アップデート一覧
+                </div>
+
+            </div>
+
+            <div class="arrow">⌄</div>
+
+        </button>
+
+
+        <div class="accordion-content">
+
+            <div class="news-item">
+                <div class="news-date">2026.10.01</div>
+                <div>
+                    同窓会ホームページを公開しました。
+                </div>
+            </div>
+
+            <div class="news-item">
+                <div class="news-date">2026.09.20</div>
+                <div>
+                    開催概要を更新しました。
+                </div>
+            </div>
+
+            <div class="news-item">
+                <div class="news-date">2026.09.10</div>
+                <div>
+                    幹事メンバーを掲載しました。
+                </div>
+            </div>
+
+        </div>
+
+    </section>
+
+</main>
+
+
+<footer>
+    岸和田高等学校 49期 同窓会
+</footer>
+
+
+<script>
+
+    document.querySelectorAll(".accordion-button").forEach(button => {
+
+        button.addEventListener("click", () => {
+
+            const accordion = button.parentElement;
+
+            accordion.classList.toggle("open");
+
+        });
+
+    });
+
+</script>
+
+</body>
+</html>
