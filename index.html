@@ -1,16 +1,25 @@
 <!DOCTYPE html>
 <html lang="ja">
+
 <head>
+
 <meta charset="UTF-8">
+
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <title>岸和田高校49期 同窓会</title>
+
+
 <style>
+
 /* =========================
    基本設定
 ========================= */
+
 * {
     box-sizing: border-box;
 }
+
 body {
     margin: 0;
     font-family:
@@ -24,9 +33,12 @@ body {
     color: #222;
     line-height: 1.7;
 }
+
+
 /* =========================
    パスワードオーバーレイ
 ========================= */
+
 #passwordOverlay {
     position: fixed;
     inset: 0;
@@ -37,6 +49,7 @@ body {
     justify-content: center;
     padding: 20px;
 }
+
 .password-box {
     width: min(380px, 100%);
     background: white;
@@ -45,22 +58,26 @@ body {
     text-align: center;
     box-shadow: 0 20px 60px rgba(0,0,0,0.3);
 }
+
 .password-title {
     font-size: 24px;
     font-weight: 700;
     color: #1d2733;
 }
+
 .password-subtitle {
     margin-top: 3px;
     font-size: 13px;
     color: #888;
     letter-spacing: 0.1em;
 }
+
 .password-message {
     margin: 28px 0 20px;
     font-size: 14px;
     color: #666;
 }
+
 #passwordInput {
     width: 100%;
     height: 48px;
@@ -71,9 +88,11 @@ body {
     text-align: center;
     outline: none;
 }
+
 #passwordInput:focus {
     border-color: #1d2733;
 }
+
 #passwordButton {
     width: 100%;
     height: 48px;
@@ -86,24 +105,30 @@ body {
     font-weight: 600;
     cursor: pointer;
 }
+
 #passwordButton:active {
     transform: scale(0.98);
 }
+
 #passwordError {
     display: none;
     margin-top: 12px;
     color: #c44;
     font-size: 13px;
 }
+
+
 /* =========================
    ヘッダー
 ========================= */
+
 header {
     background: #1d2733;
     color: white;
     text-align: center;
     padding: 55px 20px 50px;
 }
+
 .school-name {
     font-size: clamp(24px, 5vw, 38px);
     font-weight: 600;
@@ -111,27 +136,35 @@ header {
     opacity: 0.9;
     margin-bottom: 8px;
 }
+
 h1 {
     margin: 0;
     font-size: clamp(30px, 6vw, 48px);
     font-weight: 700;
     letter-spacing: 0.05em;
 }
+
 .subtitle {
     margin-top: 12px;
     font-size: 15px;
     opacity: 0.8;
 }
+
+
 /* =========================
    メイン
 ========================= */
+
 main {
     width: min(900px, calc(100% - 32px));
     margin: 40px auto 70px;
 }
+
+
 /* =========================
    最新ニュース
 ========================= */
+
 .news {
     background: white;
     border-radius: 16px;
@@ -139,6 +172,7 @@ main {
     margin-bottom: 24px;
     box-shadow: 0 5px 20px rgba(0,0,0,0.05);
 }
+
 .news-title {
     display: flex;
     align-items: center;
@@ -147,6 +181,7 @@ main {
     font-size: 18px;
     margin-bottom: 15px;
 }
+
 .news-label {
     background: #c59b55;
     color: white;
@@ -155,23 +190,29 @@ main {
     font-size: 11px;
     letter-spacing: 0.08em;
 }
+
 .news-item {
     display: flex;
     gap: 16px;
     padding: 10px 0;
     border-bottom: 1px solid #eee;
 }
+
 .news-item:last-child {
     border-bottom: none;
 }
+
 .news-date {
     color: #777;
     font-size: 13px;
     white-space: nowrap;
 }
+
+
 /* =========================
    アコーディオン
 ========================= */
+
 .accordion {
     background: white;
     border-radius: 16px;
@@ -179,6 +220,7 @@ main {
     overflow: hidden;
     box-shadow: 0 5px 20px rgba(0,0,0,0.05);
 }
+
 .accordion-button {
     width: 100%;
     border: none;
@@ -194,14 +236,17 @@ main {
     font-weight: 600;
     color: #222;
 }
+
 .accordion-button:hover {
     background: #fafafa;
 }
+
 .accordion-left {
     display: flex;
     align-items: center;
     gap: 15px;
 }
+
 .icon {
     width: 40px;
     height: 40px;
@@ -212,53 +257,67 @@ main {
     justify-content: center;
     font-size: 18px;
 }
+
 .arrow {
     font-size: 20px;
     color: #999;
     transition: transform 0.25s ease;
 }
+
 .accordion.open .arrow {
     transform: rotate(180deg);
 }
+
 .accordion-content {
     display: none;
     padding: 0 26px 26px;
     color: #555;
 }
+
 .accordion.open .accordion-content {
     display: block;
 }
+
+
 /* =========================
    情報ボックス
 ========================= */
+
 .info-box {
     background: #f7f8fa;
     border-radius: 10px;
     padding: 18px;
     margin-top: 12px;
 }
+
 .info-row {
     display: flex;
     gap: 20px;
     padding: 9px 0;
     border-bottom: 1px solid #e5e7ea;
 }
+
 .info-row:last-child {
     border-bottom: none;
 }
+
 .info-label {
     width: 90px;
     flex-shrink: 0;
     color: #777;
     font-size: 14px;
 }
+
 .info-value {
     color: #222;
     font-weight: 500;
 }
+
+
 /* =========================
    リンクボタン
 ========================= */
+
 .link-button {
     display: inline-block;
     margin-top: 18px;
@@ -273,132 +332,77 @@ main {
     cursor: pointer;
     font-family: inherit;
 }
+
 .link-button:hover {
     opacity: 0.8;
 }
+
+
 /* =========================
-   銀行直接振込ボタン
+   幹事連絡
 ========================= */
-.bank-transfer-button {
-    background: #8a8f95;
-}
-.bank-transfer-button:hover {
-    background: #747980;
-}
-/* =========================
-   銀行振込ポップアップ
-========================= */
-.bank-modal {
-    display: none;
-    position: fixed;
-    inset: 0;
-    z-index: 9000;
-    background: rgba(0, 0, 0, 0.55);
-    align-items: center;
-    justify-content: center;
-    padding: 20px;
-}
-.bank-modal.open {
-    display: flex;
-}
-.bank-modal-box {
-    width: min(420px, 100%);
-    background: white;
-    border-radius: 18px;
-    padding: 28px 24px 24px;
-    box-shadow: 0 20px 60px rgba(0,0,0,0.3);
-    position: relative;
-}
-.bank-modal-title {
-    font-size: 20px;
-    font-weight: 700;
-    color: #1d2733;
-    margin-bottom: 6px;
-}
-.bank-modal-subtitle {
-    font-size: 13px;
-    color: #888;
-    margin-bottom: 20px;
-}
-.bank-info {
+
+.contact-note {
+    margin-top: 24px;
+    padding: 18px;
     background: #f7f8fa;
     border-radius: 10px;
-    padding: 16px;
 }
-.bank-row {
-    display: flex;
-    gap: 15px;
-    padding: 8px 0;
-    border-bottom: 1px solid #e5e7ea;
-}
-.bank-row:last-child {
-    border-bottom: none;
-}
-.bank-label {
-    width: 80px;
-    flex-shrink: 0;
-    color: #777;
-    font-size: 13px;
-}
-.bank-value {
-    color: #222;
+
+.contact-title {
     font-weight: 600;
-    font-size: 14px;
-}
-.bank-note {
-    margin-top: 18px;
-    font-size: 13px;
-    color: #555;
-}
-.bank-contact {
-    margin-top: 12px;
-    padding: 12px;
-    background: #fff8e8;
-    border-radius: 8px;
-    font-size: 13px;
-    color: #555;
-}
-.bank-contact strong {
     color: #333;
+    margin-bottom: 10px;
 }
-.bank-close {
-    width: 100%;
-    height: 45px;
-    margin-top: 20px;
-    border: none;
-    border-radius: 8px;
-    background: #1d2733;
-    color: white;
+
+.contact-list {
+    margin: 0;
+    padding-left: 20px;
     font-size: 14px;
-    font-weight: 600;
-    cursor: pointer;
-    font-family: inherit;
+    color: #555;
 }
+
+.contact-mail-button {
+    display: block;
+    width: 100%;
+    text-align: center;
+    margin-top: 16px;
+}
+
+
 /* =========================
    注意事項
 ========================= */
+
 .notice-list {
     margin-top: 8px;
 }
+
 .notice-item {
     padding: 16px 0;
     border-bottom: 1px solid #eee;
 }
+
 .notice-item:last-child {
     border-bottom: none;
 }
+
 .notice-item-title {
     font-weight: 600;
     color: #333;
     margin-bottom: 5px;
 }
+
 .notice-item-text {
     font-size: 14px;
     color: #555;
 }
+
+
 /* =========================
    幹事
 ========================= */
+
 .member {
     display: flex;
     align-items: center;
@@ -406,9 +410,11 @@ main {
     padding: 12px 0;
     border-bottom: 1px solid #eee;
 }
+
 .member:last-child {
     border-bottom: none;
 }
+
 .member-icon {
     width: 42px;
     height: 42px;
@@ -418,535 +424,702 @@ main {
     align-items: center;
     justify-content: center;
 }
+
+
 /* =========================
    フッター
 ========================= */
+
 footer {
     text-align: center;
     color: #999;
     font-size: 12px;
     padding: 20px;
 }
+
+
 /* =========================
    スマートフォン
 ========================= */
+
 @media (max-width: 600px) {
+
     header {
         padding: 42px 18px 38px;
     }
+
     main {
         width: calc(100% - 22px);
         margin-top: 25px;
     }
+
     .news {
         padding: 20px;
     }
+
     .news-item {
         display: block;
     }
+
     .news-date {
         display: block;
         margin-bottom: 3px;
     }
+
     .accordion-button {
         padding: 19px;
     }
+
     .accordion-content {
         padding: 0 19px 22px;
     }
+
     .info-row {
         display: block;
     }
+
     .info-label {
         display: block;
         width: auto;
         margin-bottom: 2px;
     }
+
     .link-button {
         width: 100%;
         text-align: center;
     }
+
     .notice-item {
         padding: 15px 0;
     }
-    .bank-modal-box {
-        padding: 24px 20px 20px;
-    }
-    .bank-row {
-        gap: 10px;
-    }
-    .bank-label {
-        width: 70px;
-    }
+
 }
+
 </style>
+
 </head>
+
+
 <body>
+
+
 <!-- =========================
      パスワード画面
 ========================= -->
+
 <div id="passwordOverlay">
+
     <div class="password-box">
+
         <div class="password-title">
             岸和田高校49期
         </div>
+
         <div class="password-subtitle">
             同窓会ページ
         </div>
+
         <p class="password-message">
             関係者向けページです。<br>
             合言葉を入力してください。
         </p>
+
         <input
             type="password"
             id="passwordInput"
             placeholder="合言葉"
             autocomplete="off"
         >
+
         <button id="passwordButton">
             入室する
         </button>
+
         <div id="passwordError">
             合言葉が違います
         </div>
+
     </div>
+
 </div>
+
+
+
 <!-- =========================
      ヘッダー
 ========================= -->
+
 <header>
+
     <div class="school-name">
         岸和田高等学校
     </div>
+
     <h1>
         49期 同窓会
     </h1>
+
     <div class="subtitle">
         KISHIWADA HIGH SCHOOL 49th
     </div>
+
 </header>
+
+
+
 <main>
+
+
     <!-- =====================
          最新ニュース
     ====================== -->
+
     <section class="news">
+
         <div class="news-title">
+
             <span class="news-label">
                 NEWS
             </span>
+
             最新アップデート
+
         </div>
+
+
         <div class="news-item">
+
             <div class="news-date">
                 2026.10.03
             </div>
+
             <div>
                 同窓会ホームページを公開しました。
             </div>
+
         </div>
+
     </section>
+
+
+
     <!-- =====================
-       開催情報
+         会場情報
     ====================== -->
+
     <section class="accordion">
+
         <button class="accordion-button">
+
             <div class="accordion-left">
+
                 <div class="icon">
                     📍
                 </div>
+
                 <div>
-                    開催情報
+                    会場情報
                 </div>
+
             </div>
+
             <div class="arrow">
                 ⌄
             </div>
+
         </button>
+
+
         <div class="accordion-content">
+
             <div class="info-box">
+
                 <div class="info-row">
+
                     <div class="info-label">
                         開催日
                     </div>
+
                     <div class="info-value">
                         2026年12月29日（火）
                     </div>
+
                 </div>
+
+
                 <div class="info-row">
+
                     <div class="info-label">
                         受付
                     </div>
+
                     <div class="info-value">
-                        16:30～
+                        16:00～
                     </div>
+
                 </div>
+
+
                 <div class="info-row">
+
                     <div class="info-label">
                         開始
                     </div>
+
                     <div class="info-value">
-                        17:30～
+                        16:30～
                     </div>
+
                 </div>
+
+
                 <div class="info-row">
+
                     <div class="info-label">
                         終了
                     </div>
+
                     <div class="info-value">
-                        20:30
+                        19:30
                     </div>
+
                 </div>
+
+
                 <div class="info-row">
+
                     <div class="info-label">
                         会場
                     </div>
+
                     <div class="info-value">
+
                         スターゲイトホテル関西エアポート<br>
                         飛天の間
+
                     </div>
+
                 </div>
+
+
                 <div class="info-row">
+
                     <div class="info-label">
                         会費
                     </div>
+
                     <div class="info-value">
                         12,000円
                     </div>
+
                 </div>
+
             </div>
+
+
             <a
                 href="https://www.s-gth.jp/access/"
                 target="_blank"
                 rel="noopener noreferrer"
                 class="link-button">
+
                 📍 会場へのアクセス・地図
+
             </a>
+
         </div>
+
     </section>
+
+
+
     <!-- =====================
          会費情報
     ====================== -->
+
     <section class="accordion">
+
         <button class="accordion-button">
+
             <div class="accordion-left">
+
                 <div class="icon">
                     ￥
                 </div>
+
                 <div>
                     会費情報
                 </div>
+
             </div>
+
             <div class="arrow">
                 ⌄
             </div>
+
         </button>
+
+
         <div class="accordion-content">
+
             <p>
+
                 同窓会会費
                 <strong>12,000円</strong>
                 のお支払いは、
                 以下のページからお手続きください。
+
             </p>
+
+
             <a
                 href="https://www.collection-agency.coaplus.net/web/step?digest=gqhpZF9hc3NvY9kkYWFkOTdkOTMtN2U5NS0xMWYxLWIyOWYtYjUxY2U0OTIyMjNkqmlkX2JpbGxpbmeqUTlPQ3MwZnR0OA"
                 target="_blank"
                 rel="noopener noreferrer"
                 class="link-button">
+
                 💳 振込手続きはこちら
+
             </a>
+
+
             <p style="font-size:13px;color:#888;margin-top:18px;">
+
                 ※振込手続きページが開きます。
+
             </p>
+
+
             <!-- =====================
-                 銀行直接振込
-            ===================== -->
-            <p style="font-size:14px;color:#555;margin-top:24px;margin-bottom:0;">
-                上記リンク先でのカード支払いができない方は、<br>
-                以下ボタンより銀行振込をお願いします。
-            </p>
-            <button
-                type="button"
-                class="link-button bank-transfer-button"
-                id="bankTransferButton">
-                🏦 銀行直接振込の方はこちら
-            </button>
+                 幹事への連絡
+            ====================== -->
+
+            <div class="contact-note">
+
+                <div class="contact-title">
+                    次の場合は幹事にご連絡ください
+                </div>
+
+                <ul class="contact-list">
+
+                    <li>
+                        振込手続きサイトから支払いができなかった方
+                    </li>
+
+                    <li>
+                        ご自身以外に子女を同席させたい方
+                    </li>
+
+                </ul>
+
+
+                <a
+                    href="mailto:kishikou49@gmail.com"
+                    class="link-button contact-mail-button">
+
+                    ✉ 幹事にメール
+
+                </a>
+
+            </div>
+
         </div>
+
     </section>
+
+
+
     <!-- =====================
          注意事項
          ★ここに追加していく
     ====================== -->
+
     <section class="accordion">
+
         <button class="accordion-button">
+
             <div class="accordion-left">
+
                 <div class="icon">
                     ⚠️
                 </div>
+
                 <div>
                     注意事項
                 </div>
+
             </div>
+
             <div class="arrow">
                 ⌄
             </div>
+
         </button>
+
+
         <div class="accordion-content">
+
+
             <div class="notice-list">
+
+
                 <!-- 注意事項 01 -->
+
                 <div class="notice-item">
+
                     <div class="notice-item-text">
-                        一度お振込いただいた会費は原則返金ができません。ご了承ください。
+                        支払い後のキャンセルのご連絡は2026/12/15までにお願いいたします。
                     </div>
+
                 </div>
+
+
                 <!-- 注意事項 02 -->
+
                 <div class="notice-item">
-                    <div class="notice-item-text">
-                        ご本人以外の方の参加を希望される場合は、振込サイトにてその旨をご記入ください。追って追加の費用などをご連絡いたします（ご本人分の振込はそのまま進めてください）。
-                    </div>
-                </div>
-                <!-- 注意事項 03 -->
-                <div class="notice-item">
+
                     <div class="notice-item-text">
                         ドレスコードは特に設けませんが、ホテルでの実施となりますので、節度のある服装でお越しください。
                     </div>
+
                 </div>
+
+
                 <!--
                 =========================
                 注意事項を追加するときは
                 このブロックをコピーして
                 上の項目の下に追加してください
+
                 <div class="notice-item">
+
                     <div class="notice-item-text">
                         ここに注意事項を入力
                     </div>
+
                 </div>
                 =========================
                 -->
+
+
             </div>
+
         </div>
+
     </section>
+
+
+
     <!-- =====================
          幹事紹介
     ====================== -->
+
     <section class="accordion">
+
         <button class="accordion-button">
+
             <div class="accordion-left">
+
                 <div class="icon">
                     👥
                 </div>
+
                 <div>
                     幹事紹介
                 </div>
+
             </div>
+
             <div class="arrow">
                 ⌄
             </div>
+
         </button>
+
+
         <div class="accordion-content">
+
+
             <div class="member">
+
                 <div class="member-icon">
                     👤
                 </div>
+
                 <div>
+
                     <strong>
                         ○○ ○○
                     </strong>
+
                     <br>
+
                     <small>
                         幹事代表
                     </small>
+
                 </div>
+
             </div>
+
+
             <div class="member">
+
                 <div class="member-icon">
                     👤
                 </div>
+
                 <div>
+
                     <strong>
                         ○○ ○○
                     </strong>
+
                     <br>
+
                     <small>
                         幹事
                     </small>
+
                 </div>
+
             </div>
+
+
             <div class="member">
+
                 <div class="member-icon">
                     👤
                 </div>
+
                 <div>
+
                     <strong>
                         ○○ ○○
                     </strong>
+
                     <br>
+
                     <small>
                         幹事
                     </small>
+
                 </div>
+
             </div>
+
+
         </div>
+
     </section>
+
+
 </main>
-<!-- =========================
-     銀行振込情報ポップアップ
-========================= -->
-<div
-    class="bank-modal"
-    id="bankModal">
-    <div class="bank-modal-box">
-        <div class="bank-modal-title">
-            銀行直接振込
-        </div>
-        <div class="bank-modal-subtitle">
-            以下の口座へお振込みください
-        </div>
-        <div class="bank-info">
-            <div class="bank-row">
-                <div class="bank-label">
-                    銀行
-                </div>
-                <div class="bank-value">
-                    三井住友銀行
-                </div>
-            </div>
-            <div class="bank-row">
-                <div class="bank-label">
-                    支店
-                </div>
-                <div class="bank-value">
-                    オリーブHENNA支店
-                </div>
-            </div>
-            <div class="bank-row">
-                <div class="bank-label">
-                    口座
-                </div>
-                <div class="bank-value">
-                    普通　0739189
-                </div>
-            </div>
-            <div class="bank-row">
-                <div class="bank-label">
-                    名義
-                </div>
-                <div class="bank-value">
-                    サイトウ　ダイスケ
-                </div>
-            </div>
-        </div>
-        <div class="bank-note">
-            ※振込手数料はご本人様のご負担でお願いいたします。
-        </div>
-        <div class="bank-contact">
-            直接銀行振込をされた場合は、<strong>必ず幹事までご連絡ください。</strong><br><br>
-            幹事：齋藤大輔<br>
-            ✉ daidai36@gmail.com
-        </div>
-        <button
-            type="button"
-            class="bank-close"
-            id="bankModalClose">
-            閉じる
-        </button>
-    </div>
-</div>
+
+
+
 <footer>
+
     岸和田高等学校 49期 同窓会
+
 </footer>
+
+
+
 <script>
+
+
 /* =========================
    アコーディオン
 ========================= */
+
 document
     .querySelectorAll(".accordion-button")
     .forEach(button => {
+
         button.addEventListener("click", () => {
+
             const accordion =
                 button.parentElement;
+
             accordion.classList.toggle("open");
+
         });
+
     });
-/* =========================
-   銀行振込ポップアップ
-========================= */
-const bankTransferButton =
-    document.getElementById(
-        "bankTransferButton"
-    );
-const bankModal =
-    document.getElementById(
-        "bankModal"
-    );
-const bankModalClose =
-    document.getElementById(
-        "bankModalClose"
-    );
-bankTransferButton.addEventListener(
-    "click",
-    function() {
-        bankModal.classList.add("open");
-    }
-);
-bankModalClose.addEventListener(
-    "click",
-    function() {
-        bankModal.classList.remove("open");
-    }
-);
-/* ポップアップの外側をタップして閉じる */
-bankModal.addEventListener(
-    "click",
-    function(event) {
-        if (event.target === bankModal) {
-            bankModal.classList.remove("open");
-        }
-    }
-);
+
+
+
 /* =========================
    パスワード
 ========================= */
+
 const passwordInput =
     document.getElementById(
         "passwordInput"
     );
+
 const passwordButton =
     document.getElementById(
         "passwordButton"
     );
+
 const passwordOverlay =
     document.getElementById(
         "passwordOverlay"
     );
+
 const passwordError =
     document.getElementById(
         "passwordError"
     );
+
+
 function checkPassword() {
+
     if (
         passwordInput.value === "kk49"
     ) {
+
         passwordOverlay.style.display =
             "none";
+
     } else {
+
         passwordError.style.display =
             "block";
+
         passwordInput.value = "";
+
         passwordInput.focus();
+
     }
+
 }
+
+
 passwordButton.addEventListener(
     "click",
     checkPassword
 );
+
+
 passwordInput.addEventListener(
     "keydown",
     function(event) {
+
         if (event.key === "Enter") {
+
             checkPassword();
+
         }
+
     }
 );
+
 </script>
+
+
 </body>
+
 </html>
