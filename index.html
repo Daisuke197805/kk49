@@ -962,4 +962,219 @@ footer {
 
             </div>
 
-            <div class="arrow
+            <div class="arrow">
+                ⌄
+            </div>
+
+        </button>
+
+        <div class="accordion-content">
+
+            <div class="coming-soon">
+
+                <div class="coming-soon-label">
+                    COMING SOON
+                </div>
+
+                <div class="coming-soon-text">
+                    先生（3年次担任）と同級生の参加者情報を<br>
+                    準備中です。
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- =====================
+         幹事紹介
+    ====================== -->
+
+    <section class="accordion">
+
+        <button class="accordion-button">
+
+            <div class="accordion-left">
+
+                <div class="icon">
+                    👥
+                </div>
+
+                <div>
+                    幹事紹介
+                </div>
+
+            </div>
+
+            <div class="arrow">
+                ⌄
+            </div>
+
+        </button>
+
+        <div class="accordion-content">
+
+            <div class="organizer-order">
+                3年クラス順、指名順
+            </div>
+
+            <div class="organizer-list">
+
+                <div class="organizer-item">
+                    齋藤 大輔（3-2）
+                </div>
+
+                <div class="organizer-item">
+                    中 啓子（3-2）
+                </div>
+
+                <div class="organizer-item">
+                    藤井 豊（3-2）
+                </div>
+
+                <div class="organizer-item">
+                    福田 純一（3-4）
+                </div>
+
+                <div class="organizer-item">
+                    大森 佐知子（3-6）
+                </div>
+
+                <div class="organizer-item">
+                    中村 彩（3-6）
+                </div>
+
+                <div class="organizer-item">
+                    山本 裕子（3-7）
+                </div>
+
+                <div class="organizer-item">
+                    森 伊佐夫（3-8）
+                </div>
+
+                <div class="organizer-item">
+                    守谷 真明（3-8）
+                </div>
+
+                <div class="organizer-item">
+                    高塚 牧子（3-9）
+                </div>
+
+                <div class="organizer-item">
+                    藤原 豊和（3-10）
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- =====================
+         最下段 問い合わせ
+    ====================== -->
+
+    <div class="bottom-contact">
+
+        <a
+            href="mailto:kishikou49@gmail.com"
+            class="link-button bottom-contact-button">
+            ✉ 幹事に問い合わせをする
+        </a>
+
+    </div>
+
+</main>
+
+<footer>
+    岸和田高等学校 49期 同窓会
+</footer>
+
+<script>
+
+/* =========================
+   アコーディオン
+========================= */
+
+document
+    .querySelectorAll(".accordion-button")
+    .forEach(button => {
+
+        button.addEventListener("click", () => {
+
+            const accordion =
+                button.parentElement;
+
+            accordion.classList.toggle("open");
+
+        });
+
+    });
+
+/* =========================
+   パスワード
+========================= */
+
+const passwordInput =
+    document.getElementById(
+        "passwordInput"
+    );
+
+const passwordButton =
+    document.getElementById(
+        "passwordButton"
+    );
+
+const passwordOverlay =
+    document.getElementById(
+        "passwordOverlay"
+    );
+
+const passwordError =
+    document.getElementById(
+        "passwordError"
+    );
+
+function checkPassword() {
+
+    if (
+        passwordInput.value === "kk49"
+    ) {
+
+        passwordOverlay.style.display =
+            "none";
+
+    } else {
+
+        passwordError.style.display =
+            "block";
+
+        passwordInput.value = "";
+
+        passwordInput.focus();
+
+    }
+
+}
+
+passwordButton.addEventListener(
+    "click",
+    checkPassword
+);
+
+passwordInput.addEventListener(
+    "keydown",
+    function(event) {
+
+        if (event.key === "Enter") {
+            checkPassword();
+        }
+
+    }
+);
+
+</script>
+
+</body>
+</html>
