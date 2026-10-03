@@ -339,6 +339,18 @@ main {
 
 
 /* =========================
+   会費情報
+========================= */
+
+/* 振込ボタンを「幹事にメール」と同じ横幅にする */
+.payment-button {
+    display: block;
+    width: 100%;
+    text-align: center;
+}
+
+
+/* =========================
    幹事連絡
 ========================= */
 
@@ -445,6 +457,23 @@ main {
     display: flex;
     align-items: center;
     justify-content: center;
+}
+
+
+/* =========================
+   最下段 問い合わせ
+========================= */
+
+.bottom-contact {
+    margin-top: 30px;
+    text-align: center;
+}
+
+.bottom-contact-button {
+    display: block;
+    width: 100%;
+    text-align: center;
+    margin-top: 0;
 }
 
 
@@ -798,7 +827,7 @@ footer {
                 href="https://www.collection-agency.coaplus.net/web/step?digest=gqhpZF9hc3NvY9kkYWFkOTdkOTMtN2U5NS0xMWYxLWIyOWYtYjUxY2U0OTIyMjNkqmlkX2JpbGxpbmeqUTlPQ3MwZnR0OA"
                 target="_blank"
                 rel="noopener noreferrer"
-                class="link-button">
+                class="link-button payment-button">
 
                 💳 振込手続きはこちら
 
@@ -853,7 +882,6 @@ footer {
 
     <!-- =====================
          注意事項
-         ★ここに追加していく
     ====================== -->
 
     <section class="accordion">
@@ -885,8 +913,6 @@ footer {
             <div class="notice-list">
 
 
-                <!-- 注意事項 01 -->
-
                 <div class="notice-item">
 
                     <div class="notice-item-text">
@@ -896,8 +922,6 @@ footer {
                 </div>
 
 
-                <!-- 注意事項 02 -->
-
                 <div class="notice-item">
 
                     <div class="notice-item-text">
@@ -906,8 +930,6 @@ footer {
 
                 </div>
 
-
-                <!-- 注意事項 03 -->
 
                 <div class="notice-item">
 
@@ -923,14 +945,6 @@ footer {
                 注意事項を追加するときは
                 このブロックをコピーして
                 上の項目の下に追加してください
-
-                <div class="notice-item">
-
-                    <div class="notice-item-text">
-                        ここに注意事項を入力
-                    </div>
-
-                </div>
                 =========================
                 -->
 
@@ -1093,6 +1107,24 @@ footer {
         </div>
 
     </section>
+
+
+
+    <!-- =====================
+         最下段 問い合わせ
+    ====================== -->
+
+    <div class="bottom-contact">
+
+        <a
+            href="mailto:kishikou49@gmail.com"
+            class="link-button bottom-contact-button">
+
+            ✉ 幹事に問い合わせをする
+
+        </a>
+
+    </div>
 
 
 </main>
