@@ -126,7 +126,7 @@ header {
     background: #1d2733;
     color: white;
     text-align: center;
-    padding: 55px 20px 50px;
+    padding: 35px 20px 32px;
 }
 
 .school-name {
@@ -276,6 +276,11 @@ main {
 
 .accordion.open .accordion-content {
     display: block;
+}
+
+/* 会費情報と注意事項に赤線を追加 */
+.accordion.highlight {
+    border: 4px solid #d32f2f;
 }
 
 
@@ -490,7 +495,7 @@ footer {
 @media (max-width: 600px) {
 
     header {
-        padding: 42px 18px 38px;
+        padding: 28px 18px 26px;
     }
 
     main {
@@ -782,7 +787,7 @@ footer {
          会費情報
     ====================== -->
 
-    <section class="accordion">
+    <section class="accordion highlight">
 
         <button class="accordion-button">
 
@@ -878,7 +883,7 @@ footer {
          注意事項
     ====================== -->
 
-    <section class="accordion">
+    <section class="accordion highlight">
 
         <button class="accordion-button">
 
@@ -998,221 +1003,55 @@ footer {
     </section>
 
 
-
-    <!-- =====================
-         幹事紹介
-    ====================== -->
-
-    <section class="accordion">
-
-        <button class="accordion-button">
-
-            <div class="accordion-left">
-
-                <div class="icon">
-                    👥
-                </div>
-
-                <div>
-                    幹事紹介
-                </div>
-
-            </div>
-
-            <div class="arrow">
-                ⌄
-            </div>
-
-        </button>
-
-
-        <div class="accordion-content">
-
-            <!-- 並び順 -->
-
-            <div class="organizer-order">
-                3年クラス順、指名順
-            </div>
-
-
-            <!-- 幹事一覧 -->
-
-            <div class="organizer-list">
-
-                <div class="organizer-item">
-                    齋藤 大輔（3-2）
-                </div>
-
-                <div class="organizer-item">
-                    中 啓子（3-2）
-                </div>
-
-                <div class="organizer-item">
-                    藤井 豊（3-2）
-                </div>
-
-                <div class="organizer-item">
-                    福田 純一（3-4）
-                </div>
-
-                <div class="organizer-item">
-                    大森 佐知子（3-6）
-                </div>
-
-                <div class="organizer-item">
-                    中村 彩（3-6）
-                </div>
-
-                <div class="organizer-item">
-                    山本 裕子（3-7）
-                </div>
-
-                <div class="organizer-item">
-                    森 伊佐夫（3-8）
-                </div>
-
-                <div class="organizer-item">
-                    守谷 真明（3-8）
-                </div>
-
-                <div class="organizer-item">
-                    高塚 牧子（3-9）
-                </div>
-
-                <div class="organizer-item">
-                    藤原 豊和（3-10）
-                </div>
-
-            </div>
-
-        </div>
-
-    </section>
-
-
-
-    <!-- =====================
-         最下段 問い合わせ
-    ====================== -->
-
-    <div class="bottom-contact">
-
-        <a
-            href="mailto:kishikou49@gmail.com"
-            class="link-button bottom-contact-button">
-
-            ✉ 幹事に問い合わせをする
-
-        </a>
-
-    </div>
-
-
 </main>
 
 
-
 <footer>
-
-    岸和田高等学校 49期 同窓会
-
+    &copy; 2026 岸和田高校49期 同窓会 実行委員会
 </footer>
-
-
 
 <script>
 
+// =====================================
+// パスワード機能
+// =====================================
 
-/* =========================
-   アコーディオン
-========================= */
+const passwordInput = document.getElementById('passwordInput');
+const passwordButton = document.getElementById('passwordButton');
+const passwordOverlay = document.getElementById('passwordOverlay');
+const passwordError = document.getElementById('passwordError');
 
-document
-    .querySelectorAll(".accordion-button")
-    .forEach(button => {
+const correctPassword = 'k49alumni';
 
-        button.addEventListener("click", () => {
-
-            const accordion =
-                button.parentElement;
-
-            accordion.classList.toggle("open");
-
-        });
-
-    });
-
-
-
-/* =========================
-   パスワード
-========================= */
-
-const passwordInput =
-    document.getElementById(
-        "passwordInput"
-    );
-
-const passwordButton =
-    document.getElementById(
-        "passwordButton"
-    );
-
-const passwordOverlay =
-    document.getElementById(
-        "passwordOverlay"
-    );
-
-const passwordError =
-    document.getElementById(
-        "passwordError"
-    );
-
+passwordButton.addEventListener('click', checkPassword);
+passwordInput.addEventListener('keypress', (e) => {
+    if (e.key === 'Enter') checkPassword();
+});
 
 function checkPassword() {
-
-    if (
-        passwordInput.value === "kk49"
-    ) {
-
-        passwordOverlay.style.display =
-            "none";
-
+    if (passwordInput.value === correctPassword) {
+        passwordOverlay.style.display = 'none';
     } else {
-
-        passwordError.style.display =
-            "block";
-
-        passwordInput.value = "";
-
+        passwordError.style.display = 'block';
+        passwordInput.value = '';
         passwordInput.focus();
-
     }
-
 }
 
+// =====================================
+// アコーディオン機能
+// =====================================
 
-passwordButton.addEventListener(
-    "click",
-    checkPassword
-);
+const accordionButtons = document.querySelectorAll('.accordion-button');
 
-
-passwordInput.addEventListener(
-    "keydown",
-    function(event) {
-
-        if (event.key === "Enter") {
-
-            checkPassword();
-
-        }
-
-    }
-);
+accordionButtons.forEach(button => {
+    button.addEventListener('click', () => {
+        const accordion = button.closest('.accordion');
+        accordion.classList.toggle('open');
+    });
+});
 
 </script>
-
 
 </body>
 
