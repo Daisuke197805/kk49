@@ -102,24 +102,24 @@ header {
     background: #1d2733;
     color: white;
     text-align: center;
-    padding: 55px 20px 50px;
+    padding: 32px 20px 28px;
 }
 .school-name {
-    font-size: clamp(24px, 5vw, 38px);
+    font-size: clamp(21px, 4.5vw, 32px);
     font-weight: 600;
     letter-spacing: 0.08em;
     opacity: 0.9;
-    margin-bottom: 8px;
+    margin-bottom: 4px;
 }
 h1 {
     margin: 0;
-    font-size: clamp(30px, 6vw, 48px);
+    font-size: clamp(27px, 5.5vw, 42px);
     font-weight: 700;
     letter-spacing: 0.05em;
 }
 .subtitle {
-    margin-top: 12px;
-    font-size: 15px;
+    margin-top: 7px;
+    font-size: 13px;
     opacity: 0.8;
 }
 /* =========================
@@ -127,7 +127,7 @@ h1 {
 ========================= */
 main {
     width: min(900px, calc(100% - 32px));
-    margin: 40px auto 70px;
+    margin: 32px auto 70px;
 }
 /* =========================
    最新ニュース
@@ -229,6 +229,22 @@ main {
     display: block;
 }
 /* =========================
+   会費情報
+   薄い青色
+========================= */
+.fee-section {
+    background: #eef6fb;
+}
+.fee-section .accordion-button {
+    background: #eef6fb;
+}
+.fee-section .accordion-button:hover {
+    background: #e7f2f9;
+}
+.fee-section .accordion-content {
+    background: #eef6fb;
+}
+/* =========================
    情報ボックス
 ========================= */
 .info-box {
@@ -277,7 +293,7 @@ main {
     opacity: 0.8;
 }
 /* =========================
-   会費情報
+   会費情報ボタン
 ========================= */
 .payment-button {
     display: block;
@@ -290,7 +306,7 @@ main {
 .contact-note {
     margin-top: 24px;
     padding: 18px;
-    background: #f7f8fa;
+    background: rgba(255,255,255,0.65);
     border-radius: 10px;
 }
 .contact-title {
@@ -312,13 +328,29 @@ main {
 }
 /* =========================
    注意事項
+   薄い青色
+========================= */
+.notice-section {
+    background: #eef6fb;
+}
+.notice-section .accordion-button {
+    background: #eef6fb;
+}
+.notice-section .accordion-button:hover {
+    background: #e7f2f9;
+}
+.notice-section .accordion-content {
+    background: #eef6fb;
+}
+/* =========================
+   注意事項リスト
 ========================= */
 .notice-list {
     margin-top: 8px;
 }
 .notice-item {
     padding: 16px 0;
-    border-bottom: 1px solid #eee;
+    border-bottom: 1px solid rgba(200,215,225,0.8);
 }
 .notice-item:last-child {
     border-bottom: none;
@@ -393,7 +425,18 @@ footer {
 ========================= */
 @media (max-width: 600px) {
     header {
-        padding: 42px 18px 38px;
+        padding: 26px 18px 24px;
+    }
+    .school-name {
+        font-size: 21px;
+        margin-bottom: 3px;
+    }
+    h1 {
+        font-size: 29px;
+    }
+    .subtitle {
+        margin-top: 5px;
+        font-size: 12px;
     }
     main {
         width: calc(100% - 22px);
@@ -578,7 +621,7 @@ footer {
     <!-- =====================
          会費情報
     ====================== -->
-    <section class="accordion">
+    <section class="accordion fee-section">
         <button class="accordion-button">
             <div class="accordion-left">
                 <div class="icon">
@@ -609,9 +652,6 @@ footer {
             <p style="font-size:13px;color:#888;margin-top:18px;">
                 ※振込手続きページが開きます。
             </p>
-            <!-- =====================
-                 幹事への連絡
-            ====================== -->
             <div class="contact-note">
                 <div class="contact-title">
                     次の場合は幹事にご連絡ください
@@ -635,7 +675,7 @@ footer {
     <!-- =====================
          注意事項
     ====================== -->
-    <section class="accordion">
+    <section class="accordion notice-section">
         <button class="accordion-button">
             <div class="accordion-left">
                 <div class="icon">
@@ -666,13 +706,6 @@ footer {
                         お預かりする会費は1次会での使用を前提としていますが、余剰が発生した場合は二次会費用の一部に充当させていただく場合があります。
                     </div>
                 </div>
-                <!--
-                =========================
-                注意事項を追加するときは
-                このブロックをコピーして
-                上の項目の下に追加してください
-                =========================
-                -->
             </div>
         </div>
     </section>
@@ -723,11 +756,9 @@ footer {
             </div>
         </button>
         <div class="accordion-content">
-            <!-- 並び順 -->
             <div class="organizer-order">
                 3年クラス順、指名順
             </div>
-            <!-- 幹事一覧 -->
             <div class="organizer-list">
                 <div class="organizer-item">
                     齋藤 大輔（3-2）
