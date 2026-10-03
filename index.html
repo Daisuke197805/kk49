@@ -342,7 +342,6 @@ main {
    会費情報
 ========================= */
 
-/* 振込ボタンを「幹事にメール」と同じ横幅にする */
 .payment-button {
     display: block;
     width: 100%;
@@ -434,29 +433,24 @@ main {
 
 
 /* =========================
-   幹事
+   幹事紹介
 ========================= */
 
-.member {
-    display: flex;
-    align-items: center;
-    gap: 14px;
-    padding: 12px 0;
+.organizer-order {
+    font-size: 13px;
+    color: #888;
+    margin-bottom: 8px;
+}
+
+.organizer-item {
+    padding: 11px 0;
     border-bottom: 1px solid #eee;
+    font-size: 15px;
+    color: #333;
 }
 
-.member:last-child {
+.organizer-item:last-child {
     border-bottom: none;
-}
-
-.member-icon {
-    width: 42px;
-    height: 42px;
-    background: #e9edf1;
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
 }
 
 
@@ -1034,75 +1028,62 @@ footer {
 
         <div class="accordion-content">
 
+            <!-- 並び順 -->
 
-            <div class="member">
-
-                <div class="member-icon">
-                    👤
-                </div>
-
-                <div>
-
-                    <strong>
-                        ○○ ○○
-                    </strong>
-
-                    <br>
-
-                    <small>
-                        幹事代表
-                    </small>
-
-                </div>
-
+            <div class="organizer-order">
+                3年クラス順、指名順
             </div>
 
 
-            <div class="member">
+            <!-- 幹事一覧 -->
 
-                <div class="member-icon">
-                    👤
+            <div class="organizer-list">
+
+                <div class="organizer-item">
+                    齋藤 大輔（3-2）
                 </div>
 
-                <div>
+                <div class="organizer-item">
+                    中 啓子（3-2）
+                </div>
 
-                    <strong>
-                        ○○ ○○
-                    </strong>
+                <div class="organizer-item">
+                    藤井 豊（3-2）
+                </div>
 
-                    <br>
+                <div class="organizer-item">
+                    福田 純一（3-4）
+                </div>
 
-                    <small>
-                        幹事
-                    </small>
+                <div class="organizer-item">
+                    大森 佐知子（3-6）
+                </div>
 
+                <div class="organizer-item">
+                    中村 彩（3-6）
+                </div>
+
+                <div class="organizer-item">
+                    山本 裕子（3-7）
+                </div>
+
+                <div class="organizer-item">
+                    森 伊佐夫（3-8）
+                </div>
+
+                <div class="organizer-item">
+                    守谷 真明（3-8）
+                </div>
+
+                <div class="organizer-item">
+                    高塚 牧子（3-9）
+                </div>
+
+                <div class="organizer-item">
+                    藤原 豊和（3-10）
                 </div>
 
             </div>
-
-
-            <div class="member">
-
-                <div class="member-icon">
-                    👤
-                </div>
-
-                <div>
-
-                    <strong>
-                        ○○ ○○
-                    </strong>
-
-                    <br>
-
-                    <small>
-                        幹事
-                    </small>
-
-                </div>
-
-            </div>
-
 
         </div>
 
