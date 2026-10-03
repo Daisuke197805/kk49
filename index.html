@@ -4,13 +4,12 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>岸和田高校49期 同窓会</title>
+
 <style>
-/* =========================
-   基本設定
-========================= */
 * {
     box-sizing: border-box;
 }
+
 body {
     margin: 0;
     font-family:
@@ -24,9 +23,11 @@ body {
     color: #222;
     line-height: 1.7;
 }
+
 /* =========================
    パスワードオーバーレイ
 ========================= */
+
 #passwordOverlay {
     position: fixed;
     inset: 0;
@@ -37,6 +38,7 @@ body {
     justify-content: center;
     padding: 20px;
 }
+
 .password-box {
     width: min(380px, 100%);
     background: white;
@@ -45,22 +47,26 @@ body {
     text-align: center;
     box-shadow: 0 20px 60px rgba(0,0,0,0.3);
 }
+
 .password-title {
     font-size: 24px;
     font-weight: 700;
     color: #1d2733;
 }
+
 .password-subtitle {
     margin-top: 3px;
     font-size: 24px;
     color: #888;
     letter-spacing: 0.1em;
 }
+
 .password-message {
     margin: 28px 0 20px;
     font-size: 14px;
     color: #666;
 }
+
 #passwordInput {
     width: 100%;
     height: 48px;
@@ -71,9 +77,11 @@ body {
     text-align: center;
     outline: none;
 }
+
 #passwordInput:focus {
     border-color: #1d2733;
 }
+
 #passwordButton {
     width: 100%;
     height: 48px;
@@ -86,24 +94,29 @@ body {
     font-weight: 600;
     cursor: pointer;
 }
+
 #passwordButton:active {
     transform: scale(0.98);
 }
+
 #passwordError {
     display: none;
     margin-top: 12px;
     color: #c44;
     font-size: 13px;
 }
+
 /* =========================
    ヘッダー
 ========================= */
+
 header {
     background: #1d2733;
     color: white;
     text-align: center;
     padding: 32px 20px 28px;
 }
+
 .school-name {
     font-size: clamp(21px, 4.5vw, 32px);
     font-weight: 600;
@@ -111,27 +124,33 @@ header {
     opacity: 0.9;
     margin-bottom: 4px;
 }
+
 h1 {
     margin: 0;
     font-size: clamp(27px, 5.5vw, 42px);
     font-weight: 700;
     letter-spacing: 0.05em;
 }
+
 .subtitle {
     margin-top: 7px;
     font-size: 13px;
     opacity: 0.8;
 }
+
 /* =========================
    メイン
 ========================= */
+
 main {
     width: min(900px, calc(100% - 32px));
     margin: 32px auto 70px;
 }
+
 /* =========================
    最新ニュース
 ========================= */
+
 .news {
     background: white;
     border-radius: 16px;
@@ -139,6 +158,7 @@ main {
     margin-bottom: 24px;
     box-shadow: 0 5px 20px rgba(0,0,0,0.05);
 }
+
 .news-title {
     display: flex;
     align-items: center;
@@ -147,6 +167,7 @@ main {
     font-size: 18px;
     margin-bottom: 15px;
 }
+
 .news-label {
     background: #c59b55;
     color: white;
@@ -155,23 +176,28 @@ main {
     font-size: 11px;
     letter-spacing: 0.08em;
 }
+
 .news-item {
     display: flex;
     gap: 16px;
     padding: 10px 0;
     border-bottom: 1px solid #eee;
 }
+
 .news-item:last-child {
     border-bottom: none;
 }
+
 .news-date {
     color: #777;
     font-size: 13px;
     white-space: nowrap;
 }
+
 /* =========================
    アコーディオン
 ========================= */
+
 .accordion {
     background: white;
     border-radius: 16px;
@@ -179,6 +205,7 @@ main {
     overflow: hidden;
     box-shadow: 0 5px 20px rgba(0,0,0,0.05);
 }
+
 .accordion-button {
     width: 100%;
     border: none;
@@ -194,14 +221,17 @@ main {
     font-weight: 600;
     color: #222;
 }
+
 .accordion-button:hover {
     background: #fafafa;
 }
+
 .accordion-left {
     display: flex;
     align-items: center;
     gap: 15px;
 }
+
 .icon {
     width: 40px;
     height: 40px;
@@ -212,69 +242,100 @@ main {
     justify-content: center;
     font-size: 18px;
 }
+
 .arrow {
     font-size: 20px;
     color: #999;
     transition: transform 0.25s ease;
 }
+
 .accordion.open .arrow {
     transform: rotate(180deg);
 }
+
 .accordion-content {
     display: none;
     padding: 0 26px 26px;
     color: #555;
 }
+
 .accordion.open .accordion-content {
     display: block;
 }
+
 /* =========================
    会費情報
    薄いピンク
 ========================= */
+
 .fee-section {
     background: #fff1f3;
 }
+
 .fee-section .accordion-button {
     background: #fff1f3;
 }
+
 .fee-section .accordion-button:hover {
     background: #fde8eb;
 }
+
 .fee-section .accordion-content {
     background: #fff1f3;
 }
+
+/* 会費情報 見出し */
+.fee-title {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.fee-deadline {
+    color: #8b0000;
+    font-weight: 700;
+    font-size: 14px;
+    white-space: nowrap;
+}
+
 /* =========================
    情報ボックス
 ========================= */
+
 .info-box {
     background: #f7f8fa;
     border-radius: 10px;
     padding: 18px;
     margin-top: 12px;
 }
+
 .info-row {
     display: flex;
     gap: 20px;
     padding: 9px 0;
     border-bottom: 1px solid #e5e7ea;
 }
+
 .info-row:last-child {
     border-bottom: none;
 }
+
 .info-label {
     width: 90px;
     flex-shrink: 0;
     color: #777;
     font-size: 14px;
 }
+
 .info-value {
     color: #222;
     font-weight: 500;
 }
+
 /* =========================
    リンクボタン
 ========================= */
+
 .link-button {
     display: inline-block;
     margin-top: 18px;
@@ -289,200 +350,252 @@ main {
     cursor: pointer;
     font-family: inherit;
 }
+
 .link-button:hover {
     opacity: 0.8;
 }
-/* =========================
-   会費情報ボタン
-========================= */
+
 .payment-button {
     display: block;
     width: 100%;
     text-align: center;
 }
+
 /* =========================
    幹事連絡
 ========================= */
+
 .contact-note {
     margin-top: 24px;
     padding: 18px;
     background: rgba(255,255,255,0.65);
     border-radius: 10px;
 }
+
 .contact-title {
     font-weight: 600;
     color: #333;
     margin-bottom: 10px;
 }
+
 .contact-list {
     margin: 0;
     padding-left: 20px;
     font-size: 14px;
     color: #555;
 }
+
 .contact-mail-button {
     display: block;
     width: 100%;
     text-align: center;
     margin-top: 16px;
 }
+
 /* =========================
    注意事項
    薄いピンク
 ========================= */
+
 .notice-section {
     background: #fff1f3;
 }
+
 .notice-section .accordion-button {
     background: #fff1f3;
 }
+
 .notice-section .accordion-button:hover {
     background: #fde8eb;
 }
+
 .notice-section .accordion-content {
     background: #fff1f3;
 }
-/* =========================
-   注意事項リスト
-========================= */
+
 .notice-list {
     margin-top: 8px;
 }
+
 .notice-item {
     padding: 16px 0;
     border-bottom: 1px solid rgba(200,215,225,0.8);
 }
+
 .notice-item:last-child {
     border-bottom: none;
 }
+
 .notice-item-title {
     font-weight: 600;
     color: #333;
     margin-bottom: 5px;
 }
+
 .notice-item-text {
     font-size: 14px;
     color: #555;
 }
+
 /* =========================
    参加者情報
 ========================= */
+
 .coming-soon {
     text-align: center;
     padding: 30px 15px;
 }
+
 .coming-soon-label {
     font-size: 12px;
     letter-spacing: 0.18em;
     color: #999;
     margin-bottom: 8px;
 }
+
 .coming-soon-text {
     font-size: 15px;
     color: #555;
 }
+
 /* =========================
    幹事紹介
 ========================= */
+
 .organizer-order {
     font-size: 13px;
     color: #888;
     margin-bottom: 8px;
 }
+
 .organizer-item {
     padding: 11px 0;
     border-bottom: 1px solid #eee;
     font-size: 15px;
     color: #333;
 }
+
 .organizer-item:last-child {
     border-bottom: none;
 }
+
 /* =========================
    最下段 問い合わせ
 ========================= */
+
 .bottom-contact {
     margin-top: 30px;
     text-align: center;
 }
+
 .bottom-contact-button {
     display: block;
     width: 100%;
     text-align: center;
     margin-top: 0;
 }
+
 /* =========================
    フッター
 ========================= */
+
 footer {
     text-align: center;
     color: #999;
     font-size: 12px;
     padding: 20px;
 }
+
 /* =========================
    スマートフォン
 ========================= */
+
 @media (max-width: 600px) {
+
     header {
         padding: 26px 18px 24px;
     }
+
     .school-name {
         font-size: 21px;
         margin-bottom: 3px;
     }
+
     h1 {
         font-size: 29px;
     }
+
     .subtitle {
         margin-top: 5px;
         font-size: 12px;
     }
+
     main {
         width: calc(100% - 22px);
         margin-top: 25px;
     }
+
     .news {
         padding: 20px;
     }
+
     .news-item {
         display: block;
     }
+
     .news-date {
         display: block;
         margin-bottom: 3px;
     }
+
     .accordion-button {
         padding: 19px;
     }
+
     .accordion-content {
         padding: 0 19px 22px;
     }
+
     .info-row {
         display: block;
     }
+
     .info-label {
         display: block;
         width: auto;
         margin-bottom: 2px;
     }
+
     .link-button {
         width: 100%;
         text-align: center;
     }
+
     .notice-item {
         padding: 15px 0;
+    }
+
+    .fee-title {
+        gap: 8px;
+    }
+
+    .fee-deadline {
+        font-size: 13px;
     }
 }
 </style>
 </head>
+
 <body>
 
 <!-- =========================
      パスワード画面
 ========================= -->
+
 <div id="passwordOverlay">
+
     <div class="password-box">
+
         <div class="password-title">
             岸和田高校49期
         </div>
@@ -510,13 +623,17 @@ footer {
         <div id="passwordError">
             合言葉が違います
         </div>
+
     </div>
+
 </div>
 
 <!-- =========================
      ヘッダー
 ========================= -->
+
 <header>
+
     <div class="school-name">
         岸和田高等学校
     </div>
@@ -528,6 +645,7 @@ footer {
     <div class="subtitle">
         KISHIWADA HIGH SCHOOL 49th
     </div>
+
 </header>
 
 <main>
@@ -535,15 +653,21 @@ footer {
     <!-- =====================
          最新ニュース
     ====================== -->
+
     <section class="news">
+
         <div class="news-title">
+
             <span class="news-label">
                 NEWS
             </span>
+
             最新アップデート
+
         </div>
 
         <div class="news-item">
+
             <div class="news-date">
                 2026.10.03
             </div>
@@ -551,15 +675,21 @@ footer {
             <div>
                 同窓会ホームページを公開しました。
             </div>
+
         </div>
+
     </section>
 
     <!-- =====================
          会場情報
     ====================== -->
+
     <section class="accordion">
+
         <button class="accordion-button">
+
             <div class="accordion-left">
+
                 <div class="icon">
                     📍
                 </div>
@@ -567,17 +697,21 @@ footer {
                 <div>
                     会場情報
                 </div>
+
             </div>
 
             <div class="arrow">
                 ⌄
             </div>
+
         </button>
 
         <div class="accordion-content">
+
             <div class="info-box">
 
                 <div class="info-row">
+
                     <div class="info-label">
                         開催日
                     </div>
@@ -585,9 +719,11 @@ footer {
                     <div class="info-value">
                         2026年12月29日（火）
                     </div>
+
                 </div>
 
                 <div class="info-row">
+
                     <div class="info-label">
                         受付
                     </div>
@@ -595,9 +731,11 @@ footer {
                     <div class="info-value">
                         16:00～
                     </div>
+
                 </div>
 
                 <div class="info-row">
+
                     <div class="info-label">
                         開始
                     </div>
@@ -605,9 +743,11 @@ footer {
                     <div class="info-value">
                         16:30～
                     </div>
+
                 </div>
 
                 <div class="info-row">
+
                     <div class="info-label">
                         終了
                     </div>
@@ -615,9 +755,11 @@ footer {
                     <div class="info-value">
                         19:30
                     </div>
+
                 </div>
 
                 <div class="info-row">
+
                     <div class="info-label">
                         会場
                     </div>
@@ -626,9 +768,11 @@ footer {
                         スターゲイトホテル関西エアポート<br>
                         飛天の間
                     </div>
+
                 </div>
 
                 <div class="info-row">
+
                     <div class="info-label">
                         会費
                     </div>
@@ -636,6 +780,7 @@ footer {
                     <div class="info-value">
                         12,000円
                     </div>
+
                 </div>
 
             </div>
@@ -647,27 +792,43 @@ footer {
                 class="link-button">
                 📍 会場へのアクセス・地図
             </a>
+
         </div>
+
     </section>
 
     <!-- =====================
          会費情報
     ====================== -->
+
     <section class="accordion fee-section">
+
         <button class="accordion-button">
+
             <div class="accordion-left">
+
                 <div class="icon">
                     ￥
                 </div>
 
-                <div>
-                    会費情報
+                <div class="fee-title">
+
+                    <span>
+                        会費情報
+                    </span>
+
+                    <span class="fee-deadline">
+                        締切：11/30
+                    </span>
+
                 </div>
+
             </div>
 
             <div class="arrow">
                 ⌄
             </div>
+
         </button>
 
         <div class="accordion-content">
@@ -680,7 +841,7 @@ footer {
             </p>
 
             <a
-                href="https://www.collection-agency.coaplus.net/web/step?digest=gqhpZF9hc3NvY9kkYWFkOTdkOTMtN2U5NS0xMWYxLWIyOWYtYjUxY2U0OTIyMjNkqmlkX2JpbGxpbmeqUUE0MGhXQnVYRQ"
+                href="https://www.collection-agency.coaplus.net/web/step?digest=gqhpZF9hc3NvY9kkYWFkOTdkOTMtN2U5NS0xMWYxLWIyOWYtYjUxY2U0OTIyMjNkqmlkX2JpbGxpbmeqUTlPQ3MwZnR0OA"
                 target="_blank"
                 rel="noopener noreferrer"
                 class="link-button payment-button">
@@ -698,6 +859,7 @@ footer {
                 </div>
 
                 <ul class="contact-list">
+
                     <li>
                         振込手続きサイトから支払いができなかった方
                     </li>
@@ -705,6 +867,7 @@ footer {
                     <li>
                         ご自身以外に子女を同席させたい方
                     </li>
+
                 </ul>
 
                 <a
@@ -714,14 +877,19 @@ footer {
                 </a>
 
             </div>
+
         </div>
+
     </section>
 
     <!-- =====================
          注意事項
     ====================== -->
+
     <section class="accordion notice-section">
+
         <button class="accordion-button">
+
             <div class="accordion-left">
 
                 <div class="icon">
@@ -737,6 +905,7 @@ footer {
             <div class="arrow">
                 ⌄
             </div>
+
         </button>
 
         <div class="accordion-content">
@@ -744,32 +913,43 @@ footer {
             <div class="notice-list">
 
                 <div class="notice-item">
+
                     <div class="notice-item-text">
                         支払い後のキャンセルのご連絡は2026/12/15までにお願いいたします。
                     </div>
+
                 </div>
 
                 <div class="notice-item">
+
                     <div class="notice-item-text">
-                        ドレスコードは特に設けませんが、ホテルでの実施となりますので、節度のある服装でお越しください。
+                        スーツやジャケットでなくても構いません。清潔感のある服装でお越しください
                     </div>
+
                 </div>
 
                 <div class="notice-item">
+
                     <div class="notice-item-text">
                         お預かりする会費は1次会での使用を前提としていますが、余剰が発生した場合は二次会費用の一部に充当させていただく場合があります。
                     </div>
+
                 </div>
 
             </div>
+
         </div>
+
     </section>
 
     <!-- =====================
          参加者情報
     ====================== -->
+
     <section class="accordion">
+
         <button class="accordion-button">
+
             <div class="accordion-left">
 
                 <div class="icon">
@@ -782,207 +962,4 @@ footer {
 
             </div>
 
-            <div class="arrow">
-                ⌄
-            </div>
-        </button>
-
-        <div class="accordion-content">
-
-            <div class="coming-soon">
-
-                <div class="coming-soon-label">
-                    COMING SOON
-                </div>
-
-                <div class="coming-soon-text">
-                    先生（3年次担任）と同級生の参加者情報を<br>
-                    準備中です。
-                </div>
-
-            </div>
-
-        </div>
-    </section>
-
-    <!-- =====================
-         幹事紹介
-    ====================== -->
-    <section class="accordion">
-        <button class="accordion-button">
-
-            <div class="accordion-left">
-
-                <div class="icon">
-                    👥
-                </div>
-
-                <div>
-                    幹事紹介
-                </div>
-
-            </div>
-
-            <div class="arrow">
-                ⌄
-            </div>
-
-        </button>
-
-        <div class="accordion-content">
-
-            <div class="organizer-order">
-                3年クラス順、指名順
-            </div>
-
-            <div class="organizer-list">
-
-                <div class="organizer-item">
-                    齋藤 大輔（3-2）
-                </div>
-
-                <div class="organizer-item">
-                    中 啓子（3-2）
-                </div>
-
-                <div class="organizer-item">
-                    藤井 豊（3-2）
-                </div>
-
-                <div class="organizer-item">
-                    福田 純一（3-4）
-                </div>
-
-                <div class="organizer-item">
-                    大森 佐知子（3-6）
-                </div>
-
-                <div class="organizer-item">
-                    中村 彩（3-6）
-                </div>
-
-                <div class="organizer-item">
-                    山本 裕子（3-7）
-                </div>
-
-                <div class="organizer-item">
-                    森 伊佐夫（3-8）
-                </div>
-
-                <div class="organizer-item">
-                    守谷 真明（3-8）
-                </div>
-
-                <div class="organizer-item">
-                    高塚 牧子（3-9）
-                </div>
-
-                <div class="organizer-item">
-                    藤原 豊和（3-10）
-                </div>
-
-            </div>
-        </div>
-    </section>
-
-    <!-- =====================
-         最下段 問い合わせ
-    ====================== -->
-    <div class="bottom-contact">
-
-        <a
-            href="mailto:kishikou49@gmail.com"
-            class="link-button bottom-contact-button">
-            ✉ 幹事に問い合わせをする
-        </a>
-
-    </div>
-
-</main>
-
-<footer>
-    岸和田高等学校 49期 同窓会
-</footer>
-
-<script>
-/* =========================
-   アコーディオン
-========================= */
-document
-    .querySelectorAll(".accordion-button")
-    .forEach(button => {
-
-        button.addEventListener("click", () => {
-
-            const accordion =
-                button.parentElement;
-
-            accordion.classList.toggle("open");
-
-        });
-
-    });
-
-/* =========================
-   パスワード
-========================= */
-const passwordInput =
-    document.getElementById(
-        "passwordInput"
-    );
-
-const passwordButton =
-    document.getElementById(
-        "passwordButton"
-    );
-
-const passwordOverlay =
-    document.getElementById(
-        "passwordOverlay"
-    );
-
-const passwordError =
-    document.getElementById(
-        "passwordError"
-    );
-
-function checkPassword() {
-
-    if (
-        passwordInput.value === "kk49"
-    ) {
-
-        passwordOverlay.style.display =
-            "none";
-
-    } else {
-
-        passwordError.style.display =
-            "block";
-
-        passwordInput.value = "";
-
-        passwordInput.focus();
-
-    }
-}
-
-passwordButton.addEventListener(
-    "click",
-    checkPassword
-);
-
-passwordInput.addEventListener(
-    "keydown",
-    function(event) {
-
-        if (event.key === "Enter") {
-            checkPassword();
-        }
-
-    }
-);
-</script>
-
-</body>
-</html>
+            <div class="arrow
