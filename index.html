@@ -173,11 +173,32 @@ main {
     letter-spacing: 0.08em;
 }
 
+.news-list {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+    max-height: calc(3 * 72px + 2 * 6px);
+    overflow-y: auto;
+    padding-right: 8px;
+    scrollbar-width: thin;
+    scrollbar-color: #d7dce2 transparent;
+}
+
+.news-list::-webkit-scrollbar {
+    width: 8px;
+}
+
+.news-list::-webkit-scrollbar-thumb {
+    background: #d7dce2;
+    border-radius: 999px;
+}
+
 .news-item {
     display: flex;
     gap: 16px;
-    padding: 10px 0;
+    padding: 12px 0;
     border-bottom: 1px solid #eee;
+    min-height: 72px;
 }
 
 .news-item:last-child {
@@ -188,9 +209,9 @@ main {
     color: #777;
     font-size: 13px;
     white-space: nowrap;
+    min-width: 66px;
 }
 
-/* 重要ニュース */
 .news-item.important {
     color: #8b0000;
     font-weight: 700;
@@ -660,21 +681,50 @@ footer {
             最新アップデート
         </div>
 
-        <div class="news-item important">
-            <div class="news-date">
-                2026.11.1
+        <div class="news-list">
+            <div class="news-item important">
+                <div class="news-date">
+                    2026.11.1
+                </div>
+                <div>
+                    当日投影する写真を募集しています！
+                </div>
             </div>
-            <div>
-                当日投影する写真を募集しています！
-            </div>
-        </div>
 
-        <div class="news-item">
-            <div class="news-date">
-                2026.11.1
+            <div class="news-item">
+                <div class="news-date">
+                    2026.11.1
+                </div>
+                <div>
+                    同窓会情報サイトを公開しました。
+                </div>
             </div>
-            <div>
-                同窓会情報サイトを公開しました。
+
+            <div class="news-item">
+                <div class="news-date">
+                    2026.11.5
+                </div>
+                <div>
+                    会費の振込手続きを開始しました。
+                </div>
+            </div>
+
+            <div class="news-item">
+                <div class="news-date">
+                    2026.11.10
+                </div>
+                <div>
+                    会場の詳細とアクセス情報を更新しました。
+                </div>
+            </div>
+
+            <div class="news-item important">
+                <div class="news-date">
+                    2026.11.15
+                </div>
+                <div>
+                    二次会についての詳細は追ってご案内します。
+                </div>
             </div>
         </div>
     </section>
@@ -875,55 +925,39 @@ footer {
                         お車で来られる方はホテルの駐車場を最大8時間まで無料でご利用いただけます。
                     </div>
                 </div>
-                
             </div>
         </div>
     </section>
 
-<!-- =====================
+    <!-- =====================
      二次会について
 ====================== -->
-<section class="accordion">
-    <button class="accordion-button" type="button">
-        <div class="accordion-left">
-            <div class="icon">
-                🍻
+    <section class="accordion">
+        <button class="accordion-button" type="button">
+            <div class="accordion-left">
+                <div class="icon">
+                    🍻
+                </div>
+                <div>
+                    二次会について
+                </div>
             </div>
-            <div>
-                二次会について
+
+            <div class="arrow">
+                ⌄
+            </div>
+        </button>
+
+        <div class="accordion-content">
+            <div class="after-party-info">
+                <p>
+                    20時より同スターゲイトホテル内で二次会を予定しています
+                    （費用：4,000円を予定）。詳細は12月初旬にご連絡予定です。
+                </p>
             </div>
         </div>
+    </section>
 
-        <div class="arrow">
-            ⌄
-        </div>
-    </button>
-
-    <div class="accordion-content">
-        <div class="after-party-info">
-            <p>
-                20時より同スターゲイトホテル内で二次会を予定しています
-                （費用：4,000円を予定）。詳細は12月初旬にご連絡予定です。
-            </p>
-
-            <p>
-            <!--
-            事前に大まかな人数を連絡する必要があるため、以下リンク先より参加意思の登録をお願いいたします。
-                なお、二次会のみ参加の方も歓迎です。
-            </p>
-            -->
-        </div>
- <!--
-        <a
-            href="#"
-            class="link-button payment-button"
-            onclick="alert('参加登録ページは現在準備中です。'); return false;"
-        >
-            📝 二次会の参加意思を登録する
-        </a>
--->
-    </div>
-</section>
     <!-- =====================
          会場で投影する写真の募集
     ====================== -->
@@ -1001,7 +1035,7 @@ footer {
         <button class="accordion-button" type="button">
             <div class="accordion-left">
                 <div class="icon">
-                    👥
+                    ☎️
                 </div>
                 <div>
                     幹事紹介
@@ -1015,112 +1049,85 @@ footer {
 
         <div class="accordion-content">
             <div class="organizer-order">
-                3年時クラス順、氏名順
+                3年次担任：
             </div>
-
             <div class="organizer-list">
                 <div class="organizer-item">
-                    齋藤 大輔（3-2）
+                    〇〇 先生
                 </div>
                 <div class="organizer-item">
-                    中 啓子（3-2）
+                    〇〇 先生
                 </div>
                 <div class="organizer-item">
-                    藤井 豊（3-2）
+                    〇〇 先生
                 </div>
                 <div class="organizer-item">
-                    福田 純一（3-4）
+                    〇〇 先生
                 </div>
                 <div class="organizer-item">
-                    大森 佐知子（3-6）
-                </div>
-                <div class="organizer-item">
-                    中村 彩（3-6）
-                </div>
-                <div class="organizer-item">
-                    山本 裕子（3-7）
-                </div>
-                <div class="organizer-item">
-                    森 伊佐夫（3-8）
-                </div>
-                <div class="organizer-item">
-                    守谷 真明（3-8）
-                </div>
-                <div class="organizer-item">
-                    高塚 牧子（3-9）
-                </div>
-                <div class="organizer-item">
-                    藤原 豊和（3-10）
+                    〇〇 先生
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- =====================
-         最下段 問い合わせ
-    ====================== -->
     <div class="bottom-contact">
         <a
             href="mailto:kishikou49@gmail.com"
             class="link-button bottom-contact-button"
         >
-            ✉ 幹事に問い合わせをする
+            ✉ 幹事にお問い合わせ
         </a>
     </div>
 
 </main>
 
 <footer>
-    岸和田高等学校 49期 同窓会　幹事
+    岸和田高等学校49期 同窓会
 </footer>
 
 <script>
 /* =========================
-   アコーディオン
+   アコーディオン開閉
 ========================= */
-document
-    .querySelectorAll(".accordion-button")
-    .forEach(button => {
-        button.addEventListener("click", () => {
-            const accordion = button.parentElement;
-            accordion.classList.toggle("open");
-        });
+document.querySelectorAll('.accordion-button').forEach(button => {
+    button.addEventListener('click', () => {
+        const accordion = button.parentElement;
+        accordion.classList.toggle('open');
     });
+});
 
-/* =========================
-   パスワード
-========================= */
 const passwordInput =
-    document.getElementById("passwordInput");
+    document.getElementById('passwordInput');
 
 const passwordButton =
-    document.getElementById("passwordButton");
+    document.getElementById('passwordButton');
 
 const passwordOverlay =
-    document.getElementById("passwordOverlay");
+    document.getElementById('passwordOverlay');
 
 const passwordError =
-    document.getElementById("passwordError");
+    document.getElementById('passwordError');
 
 function checkPassword() {
-    if (passwordInput.value === "kk49") {
-        passwordOverlay.style.display = "none";
+    if (passwordInput.value === 'kk49') {
+        passwordOverlay.style.display = 'none';
     } else {
-        passwordError.style.display = "block";
-        passwordInput.value = "";
+        passwordError.style.display = 'block';
+        passwordInput.value = '';
         passwordInput.focus();
     }
 }
 
 passwordButton.addEventListener(
-    "click",
+    'click',
     checkPassword
 );
 
 passwordInput.addEventListener(
-    "keydown",
+    'keydown',
     function(event) {
-        if (event.key === "Enter") {
+        if (event.key === 'Enter') {
             checkPassword();
         }
     }
