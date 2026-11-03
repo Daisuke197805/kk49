@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="ja">
 <head>
@@ -316,10 +317,17 @@ main {
     gap: 12px;
 }
 
+/* 変更：締切表示を強調 */
 .fee-deadline {
+    display: inline-block;
     color: #8b0000;
-    font-weight: 700;
-    font-size: 14px;
+    background: #ffe0e0;
+    border: 1px solid #c65b5b;
+    border-radius: 6px;
+    padding: 4px 9px;
+    font-weight: 800;
+    font-size: 16px;
+    line-height: 1.4;
     white-space: nowrap;
 }
 
@@ -412,6 +420,15 @@ main {
     width: 100%;
     text-align: center;
     margin-top: 16px;
+}
+
+/* 追加：メールアプリが開かない場合の案内 */
+.mail-help-text {
+    margin: 9px 0 0;
+    color: #777;
+    font-size: 12px;
+    line-height: 1.7;
+    overflow-wrap: anywhere;
 }
 
 /* =========================
@@ -619,8 +636,10 @@ footer {
         gap: 8px;
     }
 
+    /* 変更：スマホでも締切を強調 */
     .fee-deadline {
-        font-size: 13px;
+        font-size: 14px;
+        padding: 4px 7px;
     }
 }
 </style>
@@ -851,6 +870,11 @@ footer {
                 >
                     ✉ 幹事にメール
                 </a>
+
+                <!-- 追加：メールボタン下の案内 -->
+                <p class="mail-help-text">
+                    ※ ボタンを押してもメールアプリが開かない場合は、お使いのメールアプリから <strong>kishikou49@gmail.com</strong> 宛に直接お問い合わせください。
+                </p>
             </div>
         </div>
     </section>
@@ -912,8 +936,8 @@ footer {
     </section>
 
     <!-- =====================
-     二次会について
-====================== -->
+         二次会について
+    ====================== -->
     <section class="accordion">
         <button class="accordion-button" type="button">
             <div class="accordion-left">
@@ -934,11 +958,11 @@ footer {
             <div class="after-party-info">
                 <p>
                     以下の通り二次会を予定しています。こちらも多くの方のご参加をお待ちしております。<br><br>
-                        開始：20時開始（22時終了）<br>
-                        会場：スターゲイトホテル関西エアポート<br>　　　6階　アクアマリンルーム<br>
-                        二次会会費：4,000円を予定<br><br>
-                        12月初旬に本サイトにて詳細ご連絡、および参加希望の確認をいたします<br>
-                        （二次会は飲み物とおつまみの提供となります）
+                    開始：20時開始（22時終了）<br>
+                    会場：スターゲイトホテル関西エアポート<br>　　　6階　アクアマリンルーム<br>
+                    二次会会費：4,000円を予定<br><br>
+                    12月初旬に本サイトにて詳細ご連絡、および参加希望の確認をいたします<br>
+                    （二次会は飲み物とおつまみの提供となります）
                 </p>
             </div>
         </div>
@@ -981,7 +1005,7 @@ footer {
         </div>
     </section>
 
-        <!-- =====================
+    <!-- =====================
          参加者情報
     ====================== -->
     <section class="accordion">
@@ -1028,9 +1052,14 @@ footer {
                 <strong>■ 同級生の参加予定者</strong>
             </p>
 
+            <!-- 変更：案内文 -->
             <p>
-                同級生の参加予定者一覧は、以下PDFで更新予定です
+                今後参加者の名簿を掲載予定です
             </p>
+
+            <!--
+            後日使用するPDFリンクボタン。
+            公開する際は、このコメントを解除してください。
 
             <a
                 href="List1/xx1.pdf"
@@ -1040,6 +1069,7 @@ footer {
             >
                 📄 ダミー/同級生の参加予定者一覧を見る（PDF）
             </a>
+            -->
 
         </div>
     </section>
@@ -1078,25 +1108,25 @@ footer {
                     福田 純一（3-4）
                 </div>
                 <div class="organizer-item">
-                    大森 佐知子（3-6） 
+                    大森 佐知子（3-6）
                 </div>
                 <div class="organizer-item">
-                     中村 彩（3-6） 
+                    中村 彩（3-6）
                 </div>
                 <div class="organizer-item">
-                     山本 裕子（3-7） 
+                    山本 裕子（3-7）
                 </div>
                 <div class="organizer-item">
-                     森 伊佐夫（3-8） 
+                    森 伊佐夫（3-8）
                 </div>
                 <div class="organizer-item">
-                     守谷 真明（3-8） 
+                    守谷 真明（3-8）
                 </div>
                 <div class="organizer-item">
-                     高塚 牧子（3-9） 
+                    高塚 牧子（3-9）
                 </div>
                 <div class="organizer-item">
-                     藤原 豊和（3-10） 
+                    藤原 豊和（3-10）
                 </div>
             </div>
         </div>
@@ -1109,6 +1139,11 @@ footer {
         >
             ✉ 幹事にお問い合わせ
         </a>
+
+        <!-- 追加：メールボタン下の案内 -->
+        <p class="mail-help-text">
+            ※ ボタンを押してもメールアプリが開かない場合は、お使いのメールアプリから <strong>kishikou49@gmail.com</strong> 宛に直接お問い合わせください。
+        </p>
     </div>
 
 </main>
