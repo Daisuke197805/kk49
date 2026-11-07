@@ -1201,4 +1201,53 @@ passwordInput.addEventListener(
 </script>
 
 </body>
+
+
+<!-- アクセス解析 -->
+<script>
+(function () {
+  const GAS_URL = https://script.google.com/macros/s/AKfycbw9qYqWo3xxoko92QDlIgFm9rInCljdo66oFXadQybG4-dVRaVyv33H9QmbEH3N6tQT/exec;
+
+  // ブラウザごとに訪問者IDを保存
+  let visitorId;
+
+  try {
+    visitorId = localStorage.getItem('kk49_visitor_id');
+
+    if (!visitorId) {
+      visitorId = crypto.randomUUID();
+      localStorage.setItem('kk49_visitor_id', visitorId);
+    }
+  } catch (e) {
+    visitorId = crypto.randomUUID();
+  }
+
+  // 端末種別を判定
+  const ua = navigator.userAgent;
+  let device = 'PC';
+
+  if (/iPhone/i.test(ua)) {
+    device = 'iPhone';
+  } else if (/iPad/i.test(ua) ||
+             (navigator.platform === 'MacIntel' &&
+              navigator.maxTouchPoints > 1)) {
+    device = 'iPad';
+  } else if (/Android/i.test(ua)) {
+    device = 'Android';
+  }
+
+  // GASへアクセス情報を送信
+  const url = new URL(GAS_URL);
+  url.searchParams.set('visitorId', visitorId);
+  url.searchParams.set('device', device);
+
+  fetch(url.toString(), {
+    method: 'GET',
+    mode: 'no-cors',
+    keepalive: true
+  }).catch(() => {});
+})();
+</script>
+
+
 </html>
